@@ -1,3 +1,7 @@
 .idea
 .idea/*
 .venv
+.env
+Makefile
+db.sqlite3
+*/migrations/*

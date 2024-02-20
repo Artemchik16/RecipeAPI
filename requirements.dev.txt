@@ -1,2 +1,5 @@
 django==4.2.10
 djangorestframework==3.14.0
+
+black
+isort
