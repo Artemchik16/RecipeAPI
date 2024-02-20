@@ -13,7 +13,7 @@ jobs:
         run: pip install -r requirements.dev.txt
 
       - name: Unit testing
-        run: python manage.py tests
+        run: python manage.py test
 
       - name: Code format
         run: black --skip-string-normalization . && isort .
