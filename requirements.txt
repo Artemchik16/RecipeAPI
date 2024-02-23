@@ -1,2 +1,8 @@
 django==4.2.10
 djangorestframework==3.14.0
+drf-spectacular
+django-phonenumber-field
+
+python-dotenv
+psycopg2-binary==2.9.2
+phonenumbers
