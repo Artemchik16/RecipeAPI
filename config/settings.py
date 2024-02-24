@@ -8,7 +8,9 @@ load_dotenv(dotenv_path)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-zn06*!bc(7v$+)eb449zi^(7zdrb^y2&-dgs)hjbe=ni0fv!%#')
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY', 'django-insecure-zn06*!bc(7v$+)eb449zi^(7zdrb^y2&-dgs)hjbe=ni0fv!%#'
+)
 
 DEBUG = os.environ.get('DEBUG', True)
 
@@ -32,11 +34,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
     'core.apps.CoreConfig',
     'users.apps.UsersConfig',
     'recipe.apps.RecipeConfig',
-
     'rest_framework',
     'rest_framework.authtoken',
     'drf_spectacular',

@@ -5,7 +5,9 @@ from users.models.user_manager import CustomUserManager
 
 
 class User(AbstractUser):
-    phone_number = PhoneNumberField(verbose_name='Phone number', unique=True, max_length=16)
+    phone_number = PhoneNumberField(
+        verbose_name='Phone number', unique=True, max_length=16
+    )
 
     USERNAME_FIELD = 'phone_number'
 

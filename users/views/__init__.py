@@ -1,1 +1,1 @@
-from .user import CreateUserView, CreateTokenView, ManageUserView
+from .user import CreateTokenView, CreateUserView, ManageUserView

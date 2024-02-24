@@ -1,17 +1,19 @@
-from rest_framework import serializers
-from django.contrib.auth import get_user_model, authenticate
+from django.contrib.auth import authenticate, get_user_model
 from django.utils.translation import gettext as _
+from rest_framework import serializers
 
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = get_user_model()
-        fields = ('username', 'phone_number', 'last_name', 'first_name',)
+        fields = (
+            'username',
+            'phone_number',
+            'last_name',
+            'first_name',
+        )
         extra_kwargs = {
-            'password': {
-                'write_only': True,
-                'min_length': 5
-            },
+            'password': {'write_only': True, 'min_length': 5},
         }
 
         def create(self, validated_data):
@@ -30,7 +32,9 @@ class UserSerializer(serializers.ModelSerializer):
 
 class AuthTokenSerializer(serializers.Serializer):
     phone_number = serializers.CharField(max_length=16)
-    password = serializers.CharField(style={'input_type': 'password'}, trim_whitespace=False)
+    password = serializers.CharField(
+        style={'input_type': 'password'}, trim_whitespace=False
+    )
 
     def validate(self, attrs):
         phone_number = attrs.get('phone_number')

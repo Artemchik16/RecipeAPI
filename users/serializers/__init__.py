@@ -1,1 +1,1 @@
-from .user import UserSerializer, AuthTokenSerializer
+from .user import AuthTokenSerializer, UserSerializer

@@ -1,7 +1,8 @@
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib import admin
-from users.models import User
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.utils.translation import gettext_lazy as _
+
+from users.models import User
 
 
 @admin.register(User)
@@ -50,4 +51,9 @@ class UserAdmin(BaseUserAdmin):
         ),
     )
 
-    list_display = ('id', 'full_name',  'username', 'phone_number', )
+    list_display = (
+        'id',
+        'full_name',
+        'username',
+        'phone_number',
+    )
