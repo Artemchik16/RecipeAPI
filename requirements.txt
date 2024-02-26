@@ -6,3 +6,6 @@ django-phonenumber-field
 python-dotenv
 psycopg2-binary==2.9.2
 phonenumbers
+pillow
+black
+isort

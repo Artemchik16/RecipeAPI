@@ -98,7 +98,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = "static/"
+STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = 'media'
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -118,11 +122,8 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
     # "DEFAULT_PAGINATION_CLASS": "core.pagination.CustomPagination",
 }
-#########################
 
-########################
-# DRF SPECTACULAR
-########################
+
 SPECTACULAR_SETTINGS = {
     "TITLE": "Images API",
     "DESCRIPTION": "Documentation for images API",
